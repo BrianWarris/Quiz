@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/Quiz/v15/.suo
+/.vs/Quiz/v15/Server/sqlite3
+/Quiz/Quiz/obj
+/Quiz/Quiz/bin
+/Quiz/bin/obj
+/Quiz/bin/Properties
