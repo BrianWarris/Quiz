@@ -138,7 +138,29 @@ namespace Quiz
                     }
                 }
             }
-
+        }
+        private void btnGoTo_Click(object sender, EventArgs e)
+        {
+            // get a question number and navigate to it
+            int n;
+            if (!string.IsNullOrEmpty(tbQuestionNo.Text))
+            {
+                if (int.TryParse(tbQuestionNo.Text, out n))
+                {
+                    if ((n >= 1) && (n <= questions.Count))
+                    {
+                        ShowQuestion(n);
+                    }
+                    else
+                    {
+                        MessageBox.Show($"Question number {tbQuestionNo.Text} is invalid; it must be between 1 and {questions.Count}");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show($"Cannot parse {tbQuestionNo.Text} as an integer");
+                }
+            }
         }
     }
 }
