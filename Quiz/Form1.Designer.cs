@@ -35,6 +35,7 @@
             this.btnPrev = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
             this.btnShow = new System.Windows.Forms.Button();
+            this.btnGoTo = new System.Windows.Forms.Button();
             this.lblCurrentFile = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -59,12 +60,11 @@
             // 
             // tbQuestionNo
             // 
-            this.tbQuestionNo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tbQuestionNo.Anchor = (System.Windows.Forms.AnchorStyles)(System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left);
             this.tbQuestionNo.Location = new System.Drawing.Point(87, 6);
             this.tbQuestionNo.Name = "tbQuestionNo";
-            this.tbQuestionNo.ReadOnly = true;
-            this.tbQuestionNo.Size = new System.Drawing.Size(100, 22);
+            this.tbQuestionNo.ReadOnly = false;
+            this.tbQuestionNo.Size = new System.Drawing.Size(40, 22);
             this.tbQuestionNo.TabIndex = 2;
             // 
             // tbAnswers
@@ -83,7 +83,7 @@
             // btnPrev
             // 
             this.btnPrev.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnPrev.Location = new System.Drawing.Point(593, 558);
+            this.btnPrev.Location = new System.Drawing.Point(543, 559);
             this.btnPrev.Name = "btnPrev";
             this.btnPrev.Size = new System.Drawing.Size(75, 23);
             this.btnPrev.TabIndex = 4;
@@ -94,7 +94,7 @@
             // btnNext
             // 
             this.btnNext.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnNext.Location = new System.Drawing.Point(789, 559);
+            this.btnNext.Location = new System.Drawing.Point(741, 559);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(75, 23);
             this.btnNext.TabIndex = 5;
@@ -105,13 +105,26 @@
             // btnShow
             // 
             this.btnShow.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnShow.Location = new System.Drawing.Point(692, 559);
+            this.btnShow.Location = new System.Drawing.Point(642, 559);
             this.btnShow.Name = "btnShow";
             this.btnShow.Size = new System.Drawing.Size(75, 23);
             this.btnShow.TabIndex = 6;
             this.btnShow.Text = "&Show";
             this.btnShow.UseVisualStyleBackColor = true;
             this.btnShow.Click += new System.EventHandler(this.btnShow_Click);
+            // 
+            // btnGoTo
+            // 
+            this.btnGoTo.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnGoTo.Location = new System.Drawing.Point(839, 559);
+            this.btnGoTo.Name = "btnGoTo";
+            this.btnGoTo.Size = new System.Drawing.Size(75, 23);
+            this.btnGoTo.TabIndex = 6;
+            this.btnGoTo.Text = "&Go To";
+            this.btnGoTo.UseVisualStyleBackColor = true;
+            this.btnGoTo.Click += new System.EventHandler(this.btnGoTo_Click);
+
+
             // 
             // lblCurrentFile
             // 
@@ -130,6 +143,7 @@
             this.Controls.Add(this.btnShow);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnPrev);
+            this.Controls.Add(this.btnGoTo);
             this.Controls.Add(this.tbAnswers);
             this.Controls.Add(this.tbQuestionNo);
             this.Controls.Add(this.label1);
@@ -150,6 +164,7 @@
         private System.Windows.Forms.Button btnPrev;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.Button btnShow;
+        private System.Windows.Forms.Button btnGoTo;
         private System.Windows.Forms.Label lblCurrentFile;
     }
 }
